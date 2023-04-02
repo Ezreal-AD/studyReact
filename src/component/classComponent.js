@@ -25,13 +25,18 @@ class Top extends Component {
 class TopTitle extends Component {
     state = {
         isShow: true,
-        spanValue: '是的'
+        spanValue: '是的',
+        arrList: ['1', '2', '3']
     }
     render() {
-        return (<div>
-            <span>{this.state.isShow ? '214' : 'xxx'}</span>
-            <div onClick={() => this.changeSpan()}>切换</div>
-        </div>)
+        var mapArr = this.state.arrList.map((item) => <div>{item}</div>)
+
+        return (
+            <div>
+                <span>{this.state.isShow ? '214' : 'xxx'}</span>
+                <div onClick={() => this.changeSpan()}>切换</div>
+                <div >{mapArr}</div>
+            </div>)
     }
     changeSpan() {
         this.setState({ isShow: !this.state.isShow })
