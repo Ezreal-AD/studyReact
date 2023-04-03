@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-
+import '../css/index.css'
 export default class todoList extends Component {
     state = {
         list: ['l1', 'a2', 'b3']
     }
     inputRef = React.createRef()
+    htmlText='<h1>htmlpianduan</h1>'
     render() {
         return (
             <div>
@@ -15,6 +16,11 @@ export default class todoList extends Component {
                             this.delData(index)
                         }}>删除</button></div>
                     })}
+                    <div className={this.state.list.length !== 0 && 'hidden'}>暂无数据</div>
+                    {/* 富文本解析 */}
+                    <div dangerouslySetInnerHTML={{
+                        __html: this.htmlText
+                    }}></div>
                 </div>
             </div>
         )

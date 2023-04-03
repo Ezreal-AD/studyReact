@@ -1,6 +1,11 @@
 .bgContent {
     background-color: aquamarine;
 }
-.topBox{
+
+.topBox {
     display: flex;
+}
+
+.hidden {
+    display: none;
 }
