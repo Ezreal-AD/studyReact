@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../css/index.css'
-
+import FunctionComponent from './functionComponent'
 class Top extends Component {
     refValue = React.createRef()
     render() {
@@ -59,6 +59,7 @@ export default class classComponent extends Component {
                 <Top></Top>
                 <Content></Content>
                 <Bottom></Bottom>
+                <FunctionComponent bg={'yellow'}></FunctionComponent>
             </div>
         )
     }
